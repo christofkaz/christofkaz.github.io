@@ -116,7 +116,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   color: #343a40;
 }
@@ -10856,7 +10856,7 @@ h1, .h1 {
 }
 
 p.lead {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -10872,9 +10872,10 @@ p.lead {
   padding-right: 1rem;
 }
 #sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  font-size: 1.3rem
 }
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
@@ -10890,7 +10891,7 @@ p.lead {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    width: 25rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -10899,9 +10900,9 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 15rem;
+    max-height: 15rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -10952,6 +10953,8 @@ section.resume-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
   max-width: 75rem;
+  margin-left: 10rem;
+  font-size: 1.3rem
 }
 section.resume-section .resume-section-content {
   width: 100%;
@@ -10959,7 +10962,7 @@ section.resume-section .resume-section-content {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 40vh;
   }
 }
 @media (min-width: 992px) {
@@ -10969,4 +10972,29 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+.invert {
+    background:    #272529 ;
+    color:  #f3f1ed
+}
+
+.invert h2 {
+    color:  #39a362
+}
+
+.invert h3{
+    color:  #f3f1ed
+}
+
+.invert h1{
+    color:  #f3f1ed
+}
+
+.invert h4{
+    color:  #f3f1ed
+}
+.invert a {
+  color: #39a362;
+  text-transform: lowercase
 }
