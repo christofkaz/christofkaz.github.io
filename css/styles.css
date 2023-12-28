@@ -10996,5 +10996,21 @@ section.resume-section .resume-section-content {
 }
 .invert a {
   color: #39a362;
-  text-transform: lowercase
+}
+
+.resume-section#about  {
+    min-height: 80vh;
+}
+
+.project-img {
+    width:30%;
+    width:95%;
+    height:30vh;
+    border: 3px solid #39a362;
+}
+
+.warning {
+    background:#fff5c0;
+    border: 3px solid #deb17c;
+    margin-bottom:3vh
 }
