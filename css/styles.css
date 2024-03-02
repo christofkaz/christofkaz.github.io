@@ -599,11 +599,6 @@ progress {
   content: "— ";
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -8265,7 +8260,7 @@ textarea.form-control-lg {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 20% !important;
 }
 
 .rounded-pill {
@@ -10948,12 +10943,9 @@ p.lead {
 section.resume-section {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  max-width: 75rem;
-  margin-left: 10rem;
+
   font-size: 1.3rem
 }
 section.resume-section .resume-section-content {
@@ -10965,14 +10957,13 @@ section.resume-section .resume-section-content {
     min-height: 40vh;
   }
 }
-@media (min-width: 992px) {
-  section.resume-section {
+
+section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-}
 
 .invert {
     background:    #272529 ;
@@ -10999,14 +10990,7 @@ section.resume-section .resume-section-content {
 }
 
 .resume-section#about  {
-    min-height: 80vh;
-}
-
-.project-img {
-    width:30%;
-    width:95%;
-    height:30vh;
-    border: 3px solid #39a362;
+    min-height: 60vh;
 }
 
 .warning {
