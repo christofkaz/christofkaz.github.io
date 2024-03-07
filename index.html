@@ -15,6 +15,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
         <style>
             #page-top {
                 padding: 0px;
@@ -26,11 +27,6 @@
                 height: auto;
             }
 
-            @media screen and (max-width: 1468px) {
-                #sideNav {
-                    display: none;
-                }
-            }
 
             .img-fluid {
                 border: solid 5px #272529;
@@ -45,6 +41,8 @@
 
             .project-title {
                 color: #39a362;
+                font-family: "Roboto Slab", serif;
+                font-size: 25px;
             }
 
             .panel {
@@ -52,11 +50,6 @@
                 display:block;
             }
 
-            .project-img {
-                width: 500px;
-                height: 300px;
-                border: 3px solid #39a362;
-            }
         </style>
     </head>
     <body id="page-top">
@@ -112,44 +105,46 @@
                                     <p style="font-size: 2vh"><i class="bi bi-exclamation-triangle" style="font-size: 3vh; margin-right:1vh"></i>Ze względu na darmowy hosting, czas ładowania strony może wynosić do 2 minut. Dziękuje za cierpliwość.</p>
                                 </div>
                             </span>
-
                             <div>
-                                <p class="project-title">Quizy o różnej tematyce</p>
-
-                                <a class="panel" href="https://quiz-game-immy.onrender.com" target="_blank" onclick="handleClick()">
-                                    <img class="project-img" src="assets/img/project-7.png" alt="A project's image" >
+                                <p class="project-title">Kawiarenka blog</p>
+                                <a class="panel" target="_blank" onclick="handleClick('1')">
+                                    <img class="project-img" src="assets/img/project-3.png" alt="A project's image">
                                 </a>
                             </div>
 
                             <div>
                                 <p class="project-title">Strona do zakupów online</p>
 
-                                <a class="panel" href="https://portfolio-project-e-commerce-6.onrender.com/" target="_blank" >
+                                <a class="panel" target="_blank" onclick="handleClick('3')">
                                     <img class="project-img" src="assets/img/project-6.png" alt="A project's image" >
                                 </a>
                             </div>
 
                             <div>
-                                <p class="project-title">Wyszukiwarka i prognoza pogody</p>
-                                <a class="panel" href="http://krzysztof3202.pythonanywhere.com/" target="_blank">
-                                    <img class="project-img" src="assets/img/project-1.png" alt="A project's image">
+                                <p class="project-title">Quizy o różnej tematyce</p>
+
+                                <a class="panel" target="_blank" onclick="handleClick('2')">
+                                    <img class="project-img" src="assets/img/project-7.png" alt="A project's image" >
                                 </a>
                             </div>
-                            <div>
-                                <p class="project-title">Kawiarenka blog</p>
-                                <a class="panel" href="https://cafe-website-4.onrender.com/" target="_blank">
-                                    <img class="project-img" src="assets/img/project-3.png" alt="A project's image">
-                                </a>
-                            </div>
+
                             <div>
                                 <p class="project-title">Dziennik Zadań</p>
-                                <a class="panel" href="https://to-do-list-qygf.onrender.com/" target="_blank">
+                                <a class="panel" target="_blank" onclick="handleClick('4')">
                                     <img class="project-img" src="assets/img/project-4.png" alt="A project's image">
                                 </a>
                             </div>
+
+                            <div>
+                                <p class="project-title">Wyszukiwarka i prognoza pogody</p>
+                                <a class="panel" href="http://krzysztof3202.pythonanywhere.com/" target="_blank" onclick="handleClick('5')">
+                                    <img class="project-img" src="assets/img/project-1.png" alt="A project's image">
+                                </a>
+                            </div>
+
                             <div>
                                 <p class="project-title">Blog kulinarny</p>
-                                <a class="panel" href="https://project-website-1.onrender.com/" target="_blank">
+                                <a class="panel" target="_blank" onclick="handleClick('6')">
                                     <img class="project-img" src="assets/img/project-2.png" alt="A project's image">
                                 </a>
                             </div>
@@ -269,18 +264,60 @@
         <div id="projectContainer">
         </div>
 
-        <script>
-            function handleClick() {
-        $('.main-page').css('display', 'none');
+<!--        PING THE WEBSITE AFTER IT WAS CLICKED SO THAT ITS READY WHEN THEY FINALLY OPEN IT!!!!!!!!!!!!!!!!!!!-->
 
-        $.ajax({
-            url: 'project1.html',
-            success: function(html) {
-                // Insert the fetched HTML into the DOM
-                $('#projectContainer').html(html);
+        <script>
+            function handleClick(pageId) {
+                var url = ""
+
+                switch(pageId) {
+                case "1":
+                    console.log('test1')
+                    url = 'https://cafe-website-4.onrender.com/'
+                    break
+                case "2":
+                    url = 'https://quiz-game-immy.onrender.com/'
+                    console.log('test2')
+                    break
+                case "3":
+                    url = 'https://portfolio-project-e-commerce-6.onrender.com/'
+                    console.log('test3')
+                    break
+                case "4":
+                    url = 'https://to-do-list-qygf.onrender.com/'
+                    console.log('test4')
+                    break
+                case "6":
+                    url = 'https://project-website-1.onrender.com/'
+                    console.log('test6')
+                    break
+                default:
+                    console.log('none')
+                }
+
+                fetch(url)
+                    .then(response => {
+                        console.log("URL fetched:", response.url);
+                    })
+                    .then(data => {
+                        console.log(url)
+                    })
+                    .catch(error => {
+                        console.error('Error fetching URL:', error);
+                    });
+
+                $('.main-page').css('display', 'none');
+
+                $.ajax({
+                    url: `project${pageId}.html`,
+                    success: function(html) {
+                        // Insert the fetched HTML into the DOM
+                        $('#projectContainer').html(html);
+                    }
+                });
             }
-        });
-    }
+<!--                url: $`project${pageId}.html`,-->
+
         </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
