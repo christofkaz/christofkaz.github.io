@@ -50,6 +50,9 @@
                 display:block;
             }
 
+            .resume-section-content hr {
+                margin-bottom:50px !important;
+            }
         </style>
     </head>
     <body id="page-top">
@@ -74,16 +77,16 @@
             <!-- Page Content-->
             <div class="container-fluid p-0 invert">
                 <!-- About-->
-                <section class="resume-section" id="about">
+                <section class="resume-section" id="about" style="width:85%;">
                     <div class="resume-section-content">
                         <h1 style= "font-size:72px;" class="mb-0">
                             Krzysztof Kaźbierowicz
                         </h1>
                         <div class="subheading mb-5 invert main">
-                            Lubin · Szkolna 19/19 · <a href="tel:+48697106752">697 106 752</a> ·
+                            <a href="tel:+48697106752">697 106 752</a> ·
                             <a href="mailto:kkazbierowicz@gmail.com">kkazbierowicz@gmail.com</a>
                         </div>
-                        <span style= "font-size:24px" class="lead mb-5">
+                        <span style= "font-size:24px margin-top:50px;" class="lead mb-5">
                             <p style="margin:0px;">
                                 Od kiedy ukonczyłem technikum na kierunku technik elektryk kwietnia zeszłego roku i zdałem mature, pracuje w zawodzie jako elektromonter. Planuje rozpocząć naukę na studiach zaocznych i rozwijać się na powierzonym mi stanowisku.
                             </p>
@@ -166,6 +169,21 @@
                         <h2 class="mb-5 section-title">Doświadczenie</h2>
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
+                                <h3 class="mb-0">Elektromonter systemów telemetrycznych</h3>
+                                <div class="subheading mb-3">Wojewódzkie Przedsiębiorstwo Energetyki Cieplnej - Legnica</div>
+                                <ul>
+                                  <li>Podłączam moduły telemetryczne do czujników, a następnie przeprowadzam ich programowanie.</li>
+                                  <li>Wykonuje montaż oraz podłączenie układu telemetrycznego w węzłach cieplnych</li>
+                                  <li>Kontroluje prawidłową prace zespołów urządzeń we wspomnianych węzłach</li>
+                                  <li>Pełnie rolę asystenta przy pomiarach sprawności sprzętu elektrycznego średniego i wysokiego napięcia</li>
+                                  <li>Prowadze protokoły badanego sprzętu przy użyciu Microsoft Word i Excel</li>
+                                </ul>
+                            </div>
+                            <div class="flex-shrink-0"><h4 class="text-primary">Styczeń 2024 - Obecnie</h4></div>
+                        </div>
+                        <hr class="m-0" />
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1">
                                 <h3 class="mb-0">Elektromonter maszyn i urządzeń górniczych</h3>
                                 <div class="subheading mb-3">KGHM Zanam - Polkowice</div>
                                 <ul>
@@ -176,8 +194,9 @@
                                   <li>Kontroluje poprawne działanie instalacji elektrycznych wspomnianych wcześniej maszyn.</li>
                                 </ul>
                             </div>
-                            <div class="flex-shrink-0"><h4 class="text-primary">Październik 2022 - Obecnie</h4></div>
+                            <div class="flex-shrink-0"><h4 class="text-primary">Październik 2022 - Styczeń 2024</h4></div>
                         </div>
+                        <hr class="m-0" />
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
                                 <h3 class="mb-0">Asystent elektromontera</h3>
@@ -190,16 +209,6 @@
                                 </ul>
                             </div>
                             <div class="flex-shrink-0"><h4 class="text-primary">Lipiec 2022 - Październik 2022</h4></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Stażysta technik elektryk</h3>
-                                <div class="subheading mb-3">Koleje dolnośląskie - Legnica </div>
-                            <ul>
-                                <li>Odbyłem miesięczny staż na którym zaznajomiłem się z obowiązkami elektryków przy potrzebie naprawy systemu pociągów trakcyjnych.</li>
-                            </ul>
-                            </div>
-                            <div class="flex-shrink-0"><h4 class="text-primary">Maj 2022 - Czerwiec 2022</h4></div>
                         </div>
                     </div>
                 </section>
@@ -279,24 +288,22 @@
 
                 switch(pageId) {
                 case "1":
-                    console.log('test1')
                     url = 'https://cafe-website-4.onrender.com/'
                     break
                 case "2":
                     url = 'https://quiz-game-immy.onrender.com/'
-                    console.log('test2')
                     break
                 case "3":
                     url = 'https://portfolio-project-e-commerce-6.onrender.com/'
-                    console.log('test3')
                     break
                 case "4":
                     url = 'https://to-do-list-qygf.onrender.com/'
-                    console.log('test4')
                     break
                 case "6":
                     url = 'https://project-website-1.onrender.com/'
-                    console.log('test6')
+                    break
+                case "7":
+                    url = 'https://quote-api-website.onrender.com/api/documentation'
                     break
                 default:
                     console.log('none')
